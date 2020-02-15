@@ -1,7 +1,6 @@
 <!doctype html>
 <html>
     <body>
-        <script src="structures/Search Info"></script>
         <h1>Welcome to Gift Advisor!</h1>
         <p>This is a service made to make your gift shopping experience a breeze!</p>
         <h2><button type="button">Click Me!</button></h2>
@@ -14,10 +13,6 @@
               <option value = "20-50 - Adult">20-50 - Adult</option>
               <option value = "50+ - Seinor">50+ - Senior</option>
             </select>
-            <script>
-                var a = document.getElementById("Age Group");
-                var ageGroup = e.options[e.selectedIndex].value;
-            </script>
             <label>Ocassion</label>
             <select id = "Ocassion">
               <option value = "Birthday">Birthday</option>
@@ -31,10 +26,6 @@
               <option value = "Valentines Day">Valentines Day</option>
               <option value = "Wedding">Wedding</option>
             </select>
-            <script>
-                var b = document.getElementById("Ocassion");
-                var ocassionDrop = b.options[e.selectedIndex].value;
-            </script>
             <label>Interests</label>
             <select id = "Interests">
               <option value = "Books">Books</option>
@@ -47,7 +38,11 @@
               <option value = "Sports">Sports</option>
               <option value = "Outdoors">Outdoors</option>
             </select>
-            <script>
+            <script src="structures/search-info">
+                var a = document.getElementById("Age Group");
+                var ageGroup = e.options[e.selectedIndex].value;
+                var b = document.getElementById("Ocassion");
+                var ocassionDrop = b.options[e.selectedIndex].value;
                 var c = document.getElementById("Interests");
                 var interest = c.options[e.selectedIndex].value;
                 let search = new GiftInfo(ageGroup, interest, ocassionDrop);
