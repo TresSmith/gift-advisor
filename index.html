@@ -3,7 +3,7 @@
     <body>
         <h1>Welcome to Gift Advisor!</h1>
         <p>This is a service made to make your gift shopping experience a breeze!</p>
-        <h2><button type="button">When Finished, Click Me!</button></h2>
+        <h2><button type="button" onclick="onClick();">When Finished, Click Me!</button></h2>
         <p>
             <label>Age Group</label>
             <select id = "Age Group">
@@ -39,14 +39,17 @@
               <option value = "Sports">Sports</option>
               <option value = "Outdoors">Outdoors</option>
             </select>
-            <script src="structures/search-info">
-                var a = document.getElementById("Age Group");
-                var ageGroup = a.options[e.selectedIndex].value;
-                var b = document.getElementById("Ocassion");
-                var ocassionDrop = b.options[e.selectedIndex].value;
-                var c = document.getElementById("Interests");
-                var interest = c.options[e.selectedIndex].value;
-                let search = new GiftInfo(ageGroup, interest, ocassionDrop);
+            <script src="structures/search-info"></script>
+            <script>
+                function onClick() {
+                    var a = document.getElementById("Age Group");
+                    var ageGroup = a.options[e.selectedIndex].value;
+                    var b = document.getElementById("Ocassion");
+                    var ocassionDrop = b.options[e.selectedIndex].value;
+                    var c = document.getElementById("Interests");
+                    var interest = c.options[e.selectedIndex].value;
+                    let search = new GiftInfo(ageGroup, interest, ocassionDrop);
+                }
             </script>
          </p>
 
