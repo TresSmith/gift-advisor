@@ -1,8 +1,8 @@
 class GiftInfo {
-    constructor(age, interest, occasion) {
+    constructor(age, interest, ocassion) {
         this.age = age;
         this.interest = interest;
-        this.occasion = occasion;
+        this.ocassion = occasion;
     }
     getAge() {
         return this.age;
@@ -10,7 +10,7 @@ class GiftInfo {
     getInterest() {
         return this.interest;
     }
-    getOccasion() {
-        return this.occasion;
+    getOcassion() {
+        return this.ocassion;
     }
 }
