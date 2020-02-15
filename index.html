@@ -3,7 +3,7 @@
     <body>
         <h1>Welcome to Gift Advisor!</h1>
         <p>This is a service made to make your gift shopping experience a breeze!</p>
-        <h2><button type="button">Click Me!</button></h2>
+        <h2><button type="button">When Finished, Click Me!</button></h2>
         <p>
             <label>Age Group</label>
             <select id = "Age Group">
@@ -21,10 +21,8 @@
               <option value = "Baby Shower">Baby Shower</option>
               <option value = "Christmas">Christmas</option>
               <option value = "Easter">Easter</option>
-              <option value = "St. Patricks Day">St. Patricks Day</option>
               <option value = "New Years">New Years</option>
               <option value = "Chinese New Years">Chinese New Years</option>
-              <option value = "Thanksgiving">Thanksgiving</option>
               <option value = "Valentines Day">Valentines Day</option>
               <option value = "Wedding">Wedding</option>
             </select>
@@ -43,7 +41,7 @@
             </select>
             <script src="structures/search-info">
                 var a = document.getElementById("Age Group");
-                var ageGroup = e.options[e.selectedIndex].value;
+                var ageGroup = a.options[e.selectedIndex].value;
                 var b = document.getElementById("Ocassion");
                 var ocassionDrop = b.options[e.selectedIndex].value;
                 var c = document.getElementById("Interests");
