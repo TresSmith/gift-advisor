@@ -44,6 +44,15 @@
               <option value = "Sports">Sports</option>
               <option value = "Outdoors">Outdoors</option>
             </select>
+            <script src="structures/search-info">
+                var a = document.getElementById("Age Group");
+                var ageGroup = e.options[e.selectedIndex].value;
+                var b = document.getElementById("Ocassion");
+                var ocassionDrop = b.options[e.selectedIndex].value;
+                var c = document.getElementById("Interests");
+                var interest = c.options[e.selectedIndex].value;
+                let search = new GiftInfo(ageGroup, interest, ocassionDrop);
+            </script>
          </p>
          <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js"></script>
          <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-auth.js"></script>
