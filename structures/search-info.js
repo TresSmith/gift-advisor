@@ -5,8 +5,12 @@ class SearchInfo {
         this.ocassion = ocassion;
     }
     isApplicable(gift) {
-        if (age == gift.age || interest == gift.interest || ocassion == gift.occasion) {
-            return false;
-        }
+        let applicability = true;
+        for (element of gift.naa) {
+            if (age == element || interest == element || ocassion == element) {
+                applicability = false;
+            }
+        };
+        return applicability;
     }
 }
