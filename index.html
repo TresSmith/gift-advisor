@@ -4,12 +4,17 @@
   <head>
     <title>Gift Advisor Home</title>
     <link rel="stylesheet" type="text/css" href="CSS/webCustomization.css"/>
-  </head>
+
   <body>
-      <h1>Gift Advisor</h1>
-      <p>This is a service made to make your gift shopping experience a breeze!</p>
+      <h1>
+        <img src='./logo.png' class="logo" />
+        Gift Advisor
+      </h1>
+      <hr>
+      <p>Choose 3 categories to get a great gift suggestion!</p>
       
-      <p>
+      <p1 >
+        <p2 >
           <label>Age Group:</label>
           <select id = "Age Group">
             <option value = "-- Select An Option --">-- Select An Option --</option>
@@ -21,6 +26,7 @@
           </select>
           <label>Ocassion:</label>
           <select id = "Ocassion">
+
             <option value = "-- Select An Option --">-- Select An Option --</option>
             <option value = "Birthday">Birthday</option>
             <option value = "Baby Shower">Baby Shower</option>
@@ -43,6 +49,7 @@
             <option value = "Home & Kitchen">Home & Kitchen</option>
             <option value = "Sports">Sports</option>
             <option value = "Outdoors">Outdoors</option>
+          </p2>
           </select>
           <div><button type="button" onclick="onClick();">Submit</button></div>
           <script src="structures/search-info.js"></script>
@@ -59,7 +66,7 @@
                   alert(user.age + ", " + user.interest + ", " + user.ocassion);
               }
           </script>
-        </p>
+        </p1>
 
   </body>
 </html>
