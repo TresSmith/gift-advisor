@@ -14,4 +14,5 @@ let chineseClock = createGift("Chinese Clock", ["empty"], false);
 let cookingBook = createGift("Cooking Book", ["empty"], false);
 let badmintonSet = createGift("Badminton Set", ["empty"], false);
 let how2Parent = createGift("How2Parent", ["empty"], false);
-this.giftsList = [babyBlanket, doll, toyCar, motorola, paintingKit, heartStatue, tent, bible, weddingPhotoBook, stuffedDog, sweatShirt, NBA2K20, chineseClock, cookingBook, badmintonSet, how2Parent];
+let pokemonCards = createGift("Pokemon Cards", ["empty"], false);
+this.giftsList = [babyBlanket, doll, toyCar, motorola, paintingKit, heartStatue, tent, bible, weddingPhotoBook, stuffedDog, sweatShirt, NBA2K20, chineseClock, cookingBook, badmintonSet, how2Parent, pokemonCards];
