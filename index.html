@@ -1,5 +1,64 @@
 <!doctype html>
 <html>
+
+  <head>
+    <title>Gift Advisor Home</title>
+    <link rel="stylesheet" type="text/css" href="CSS/webCustomization.css"/>
+  </head>
+  <body>
+      <h1>Gift Advisor</h1>
+      <p>This is a service made to make your gift shopping experience a breeze!</p>
+      
+      <p>
+          <label>Age Group:</label>
+          <select id = "Age Group">
+            <option value = "-- Select An Option --">-- Select An Option --</option>
+            <option value = "0-3 - Toddler">0-3 - Toddler</option>
+            <option value = "4-12 - Child">4-12 - Child</option>
+            <option value = "13-19 - Teenager">13-19 - Teenager</option>
+            <option value = "20-50 - Adult">20-50 - Adult</option>
+            <option value = "50+ - Senior">50+ - Senior</option>
+          </select>
+          <label>Ocassion:</label>
+          <select id = "Ocassion">
+            <option value = "-- Select An Option --">-- Select An Option --</option>
+            <option value = "Birthday">Birthday</option>
+            <option value = "Baby Shower">Baby Shower</option>
+            <option value = "Christmas">Christmas</option>
+            <option value = "Easter">Easter</option>
+            <option value = "New Years">New Years</option>
+            <option value = "Chinese New Years">Chinese New Years</option>
+            <option value = "Valentines Day">Valentines Day</option>
+            <option value = "Wedding">Wedding</option>
+          </select>
+          <label>Interests:</label>
+          <select id = "Interests">
+            <option value = "-- Select An Option --">-- Select An Option --</option>
+            <option value = "Books">Books</option>
+            <option value = "Video Games">Video Games</option>
+            <option value = "Arts & Crafts">Arts & Crafts</option>
+            <option value = "Personal Care">Personal Care</option>
+            <option value = "Cell Phone & Computer Accessories">Cell Phone & Computer Accessories</option>
+            <option value = "Clothing">Clothing</option>
+            <option value = "Home & Kitchen">Home & Kitchen</option>
+            <option value = "Sports">Sports</option>
+            <option value = "Outdoors">Outdoors</option>
+          </select>
+          <div><button type="button" onclick="onClick();">When Finished, Click Me!</button></div>
+          <script src="structures/search-info"></script>
+          <script>
+              function onClick() {
+                  var a = document.getElementById("Age Group");
+                  var ageGroup = a.options[e.selectedIndex].value;
+                  var b = document.getElementById("Ocassion");
+                  var ocassionDrop = b.options[e.selectedIndex].value;
+                  var c = document.getElementById("Interests");
+                  var interest = c.options[e.selectedIndex].value;
+                  let search = new GiftInfo(ageGroup, interest, ocassionDrop);
+              }
+          </script>
+        </p>
+=======
     <body>
         <h1>Welcome to Gift Advisor!</h1>
         <p>This is a service made to make your gift shopping experience a breeze!</p>
@@ -55,5 +114,6 @@
             </script>
          </p>
 
-    </body>
+
+  </body>
 </html>
