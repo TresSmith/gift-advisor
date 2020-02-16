@@ -19,10 +19,12 @@
       </h1>
       <hr>
         <p>
+        <p5>
           <label> Please select every 
-            <p1>non applicable</p1> option for this gift!</label>
-        </p>
-        <p id= "gift"></p>
+            <p6>non applicable</p6> option for this gift!</label>
+        </p5>
+        <p id= "giftPrint"></p>
+        
           <input type="checkbox" id="age1" name="0-3" value="Toddler">
           <label for="age1"> 0-3 - Toddler</label><br>
           <input type="checkbox" id="age2" name="4-12" value="Child">
@@ -81,11 +83,11 @@
         </h1>
         <hr>
       </div>
-          <p2>
+          <p3>
             Choose 3 categories to get a great gift suggestion!
-          </p2>
-        <p3 >
-          <p4>
+          </p3>
+        <p1 >
+          <p2 >
             <label>Age Group:</label>
             <select id = "Age Group">
               <option value = "-- Select An Option --">-- Select An Option --</option>
@@ -120,10 +122,10 @@
               <option value = "Home & Kitchen">Home & Kitchen</option>
               <option value = "Sports">Sports</option>
               <option value = "Outdoors">Outdoors</option>
-            </p4>
+            </p2>
             </select>
             <div><button type="button" onclick="onClick();">Submit</button></div>
-        </p3>
+        </p1>
         <p id ="1"></p>
       </div>
 
@@ -138,7 +140,8 @@
             document.getElementById('something else').className = 'hidden';
             var element = document.getElementById("selection");
             element.classList.remove("hidden");
-          }
+            console.log(document.getElementById("age1").checked);
+            }
           
           function onClick() {
               var a = document.getElementById("Age Group");
