@@ -6,8 +6,9 @@ class SearchInfo {
     }
     isApplicable(gift) {
         let applicability = true;
-        for (element of gift.naa) {
-            if (age == element || interest == element || ocassion == element) {
+        var theGift;
+        for (theGift of gift.naa) {
+            if (this.age == theGift || this.interest == theGift || this.ocassion == theGift) {
                 applicability = false;
             }
         }
