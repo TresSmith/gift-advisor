@@ -46,7 +46,8 @@
           </select>
           <div><button type="button" onclick="onClick();">Submit</button></div>
           <script src="structures/search-info.js"></script>
-          <script src="search-info.js"></script>
+          <script src="structures/gift.js"></script>
+          <script src="our-gifts.js"></script>
           <script>
               function onClick() {
                   var a = document.getElementById("Age Group");
@@ -55,8 +56,23 @@
                   var ocassionDrop = b.options[b.selectedIndex].value;
                   var c = document.getElementById("Interests");
                   var interestDrop = c.options[c.selectedIndex].value;
-                  let user = new SearchInfo(ageGroupDrop, interestDrop, ocassionDrop);
-                  alert(user.age + ", " + user.interest + ", " + user.ocassion);
+                  this.user = new SearchInfo(ageGroupDrop, interestDrop, ocassionDrop);
+                  console.log(user.age + ", " + user.interest + ", " + user.ocassion);
+                  for (element of parse(gifts)) {
+                    console.log(element);
+                  }
+              }
+              function parse(giftArray) {
+                let print = [];
+                let i = 0;
+                console.log(giftArray);
+                for (currentGift of giftArray) {
+                  if (user.isApplicable(currentGift)) {
+                    print[i] = currentGift.name;
+                    i++;
+                  }
+                }
+                return print;
               }
           </script>
         </p>

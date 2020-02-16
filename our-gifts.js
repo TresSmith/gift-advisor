@@ -14,6 +14,4 @@ let chineseClock = createGift("chineseClock", ["13-19", "20-50", "50+", "Chinese
 let cookingBook = createGift("cookingBook", ["4-12", "13-19", "20-50", "50+", "Christmas", "Birthday", "Wedding"]);
 let badmitonSet = createGift("badmitonSet", ["4-12", "13-19", "Christmas", "Birthday"]);
 let how2Parent = createGift("how2Parent", ["20-50", "Christmas", "Birthday", "Wedding"]);
-
-
-
+let gifts = [babyBlanket, doll, toyCar, motorola, paintingKit, heartStatue, tent, bible, weddingPhotoBook, stuffedDog, sweatShirt, NBA2K20, chineseClock, cookingBook, badmitonSet, how2Parent];

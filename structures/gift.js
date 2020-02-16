@@ -1,6 +1,8 @@
 
 
-function createGift(gift, naa) {
-    this.gift = gift;
-    this.naa = naa;
+function createGift(name, naa) {
+    return {
+        name: name,
+        naa: naa,
+    }
 }
