@@ -65,9 +65,11 @@
                   var interestDrop = c.options[c.selectedIndex].value;
                   this.user = new SearchInfo(ageGroupDrop, interestDrop, ocassionDrop);
                   console.log(user.age + ", " + user.interest + ", " + user.ocassion);
+                  let print = "";
                   for (element of parse(gifts)) {
-                    console.log(element);
+                    print += element + ", ";
                   }
+                  document.getElementById("1").innerHTML = print;
               }
               function parse(giftArray) {
                 let print = [];
@@ -83,6 +85,6 @@
               }
           </script>
         </p1>
-
+        <p id ="1"></p>
   </body>
 </html>
