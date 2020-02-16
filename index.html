@@ -129,7 +129,27 @@
         <p id ="1"></p>
       </div>
 
+      <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js"></script>
 
+
+      <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-firestore.js"></script>
+      
+      <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyCvHNl5pqekV-m7AFrpP9haSuzhXu-rjVo",
+          authDomain: "gift-advisor-a7e6e.firebaseapp.com",
+          databaseURL: "https://gift-advisor-a7e6e.firebaseio.com",
+          projectId: "gift-advisor-a7e6e",
+          storageBucket: "gift-advisor-a7e6e.appspot.com",
+          messagingSenderId: "246285034129",
+          appId: "1:246285034129:web:9636f239164e8fbc4f5530"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+      var db = firebase.firestore();
+      </script>
       <script src="structures/search-info.js"></script>
       <script src="structures/gift.js"></script>
       <script src="our-gifts.js"></script>
@@ -141,8 +161,84 @@
             var element = document.getElementById("selection");
             element.classList.remove("hidden");
             console.log(document.getElementById("age1").checked);
-            }
-          
+            let dbArray = [];
+            if (document.getElementById("age1").checked) {
+  dbArray.push("Toddler");
+}
+if (document.getElementById("age2").checked) {
+  dbArray.push("Child");
+}
+if (document.getElementById("age3").checked) {
+  dbArray.push("Teenager");
+}
+if (document.getElementById("age4").checked) {
+  dbArray.push("Adult");
+}
+if (document.getElementById("age5").checked) {
+  dbArray.push("Senior");
+}
+if (document.getElementById("interests1").checked) {
+  dbArray.push("Books");
+}
+if (document.getElementById("interests2").checked) {
+  dbArray.push("Video Games");
+}
+if (document.getElementById("interests3").checked) {
+ dbArray.push("Arts & Crafts");
+}
+if (document.getElementById("interests4").checked) {
+ dbArray.push("Personal Care");
+}
+if (document.getElementById("interests5").checked) {
+ dbArray.push("Cell Phone & Computer Accessories");
+}
+if (document.getElementById("interests6").checked) {
+  dbArray.push("Clothing");
+}
+if (document.getElementById("interests7").checked) {
+  dbArray.push("Home & Kitchen");
+}
+if (document.getElementById("interests8").checked) {
+  dbArray.push("Sports");
+}
+if (document.getElementById("interests9").checked) {
+  dbArray.push("Outdoors");
+}
+ 
+if (document.getElementById("occasion1").checked) {
+  dbArray.push("Toddler");
+}
+ 
+if (document.getElementById("occasion2").checked) {
+ dbArray.push("Baby Shower");
+}
+ 
+if (document.getElementById("occasion3").checked) {
+  dbArray.push("Christmas");
+}
+ 
+if (document.getElementById("occasion4").checked) {
+  dbArray.push("Easter");
+}
+ 
+if (document.getElementById("occasion5").checked) {
+dbArray.push("New Years");
+}
+ 
+if (document.getElementById("occasion6").checked) {
+  dbArray.push("Chinese New Years");
+}
+ 
+if (document.getElementById("occasion7").checked) {
+  dbArray.push("Valentines Day");
+}
+if (document.getElementById("occasion8").checked) {
+  dbArray.push("Wedding");
+}
+db.collection("Gifts").doc(giftsList[giftNum].name).set( {
+  naa: dbArray,
+})
+          }
           function onClick() {
               var a = document.getElementById("Age Group");
               var ageGroupDrop = a.options[a.selectedIndex].value;
@@ -171,26 +267,7 @@
             return print;
           }
       </script>
-      <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js"></script>
-
-
-      <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-auth.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-firestore.js"></script>
       
-      <script>
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-          apiKey: "AIzaSyCvHNl5pqekV-m7AFrpP9haSuzhXu-rjVo",
-          authDomain: "gift-advisor-a7e6e.firebaseapp.com",
-          databaseURL: "https://gift-advisor-a7e6e.firebaseio.com",
-          projectId: "gift-advisor-a7e6e",
-          storageBucket: "gift-advisor-a7e6e.appspot.com",
-          messagingSenderId: "246285034129",
-          appId: "1:246285034129:web:9636f239164e8fbc4f5530"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-      </script>
       
   </body>
 </html>
