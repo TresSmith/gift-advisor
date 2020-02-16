@@ -45,7 +45,8 @@
             <option value = "Outdoors">Outdoors</option>
           </select>
           <div><button type="button" onclick="onClick();">When Finished, Click Me!</button></div>
-          <script src="structures/search-info"></script>
+          <script src="structures/search-info.js"></script>
+          <script src="search-info.js"></script>
           <script>
               function onClick() {
                   var a = document.getElementById("Age Group");
@@ -54,7 +55,7 @@
                   var ocassionDrop = b.options[e.selectedIndex].value;
                   var c = document.getElementById("Interests");
                   var interest = c.options[e.selectedIndex].value;
-                  let search = new GiftInfo(ageGroup, interest, ocassionDrop);
+                  let user = new GiftInfo(ageGroup, interest, ocassionDrop);
               }
           </script>
         </p>
