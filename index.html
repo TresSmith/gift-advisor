@@ -19,25 +19,24 @@
       </h1>
       <hr>
 
-
-    <div id="something else" class="">
-      <div class="top_bar">
-        <h1 style="display: inline;">
-          <img src='./logo.png' class="logo" />
-          Gift Advisor
-          
-        </h1>
-        <p class="menu_bar">
-          <a href="youlink">about</a>
-        </p>
       </div>
         <p>
-          <p3>
-            Choose 3 categories to get a great gift suggestion!
-          </p3></p>
         <p5>
           <label> Please select every non applicable option for this gift!</label>
         </p5>
+        <p id= "gift"></p>
+        
+          <input type="checkbox" id="age1" name="0-3" value="Toddler">
+          <label for="age1"> 0-3 - Toddler</label><br>
+          <input type="checkbox" id="age2" name="4-12" value="Child">
+          <label for="age2"> 4-12 - Child</label><br>
+          <input type="checkbox" id="age3" name="13-19" value="Teenager">
+          <label for="age3"> 13-19 - Teenager</label><br><br>
+          <input type="checkbox" id="age4" name="20-50" value="Adult">
+          <label for="age4"> 20-50 - Adult</label><br><br>
+          <input type="checkbox" id="age5" name="50+" value="Senior">
+          <label for="age5"> 50+ - Senior</label><br><br>
+          <input type="submit" value="Submit">
 
     </div>
     <div id="selection" class="hidden">
@@ -61,11 +60,11 @@
             <label>Age Group:</label>
             <select id = "Age Group">
               <option value = "-- Select An Option --">-- Select An Option --</option>
-              <option value = "0-3 - Toddler">0-3 - Toddler</option>
-              <option value = "4-12 - Child">4-12 - Child</option>
-              <option value = "13-19 - Teenager">13-19 - Teenager</option>
-              <option value = "20-50 - Adult">20-50 - Adult</option>
-              <option value = "50+ - Senior">50+ - Senior</option>
+              <option value = "Toddler">0-3 - Toddler</option>
+              <option value = "Child">4-12 - Child</option>
+              <option value = "Teenager">13-19 - Teenager</option>
+              <option value = "Adult">20-50 - Adult</option>
+              <option value = "Senior">50+ - Senior</option>
             </select>
             <label>Occasion:</label>
             <select id = "Occasion">
@@ -104,9 +103,11 @@
       <script src="structures/gift.js"></script>
       <script src="our-gifts.js"></script>
       <script>
+        let giftNum = Math.floor((Math.random() * (gifts.length + 1)));
+          document.getElementById("gift").innerHTML = gifts[giftNum].name;
           document.getElementById('something else').className = '';
           document.getElementById('selections').className = 'hidden';
-
+          
 
 
           function onClick() {
