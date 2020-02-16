@@ -4,4 +4,9 @@ class SearchInfo {
         this.interest = interest;
         this.ocassion = ocassion;
     }
+    isApplicable(gift) {
+        if (age == gift.age || interest == gift.interest || ocassion == gift.occasion) {
+            return false;
+        }
+    }
 }
