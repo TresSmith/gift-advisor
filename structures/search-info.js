@@ -1,8 +1,8 @@
 class SearchInfo {
-    constructor(age, interest, ocassion) {
-        this.age = age;
-        this.interest = interest;
-        this.ocassion = ocassion;
+    constructor(ageMe, interestMe, ocassionMe) {
+        this.age = ageMe;
+        this.interest = interestMe;
+        this.ocassion = ocassionMe;
     }
     isApplicable(gift) {
         let applicability = true;
@@ -10,7 +10,7 @@ class SearchInfo {
             if (age == element || interest == element || ocassion == element) {
                 applicability = false;
             }
-        };
+        }
         return applicability;
     }
 }
