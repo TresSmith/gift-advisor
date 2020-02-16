@@ -163,7 +163,7 @@
       </script>
       <script src="structures/search-info.js"></script>
       <script src="structures/gift.js"></script>
-      <script src="our-gifts.js"></script>
+      <script src="db-gifts.js"></script>
       <script>
         let giftNum = Math.floor((Math.random() * (giftsList.length + 1)));
           document.getElementById("giftPrint").innerHTML = giftsList[giftNum].name;
@@ -171,7 +171,6 @@
             document.getElementById('something else').className = 'hidden';
             var element = document.getElementById("selection");
             element.classList.remove("hidden");
-            console.log(document.getElementById("age1").checked);
             let dbArray = [];
             if (document.getElementById("age1").checked) {
   dbArray.push("Toddler");
@@ -246,9 +245,13 @@ if (document.getElementById("occasion7").checked) {
 if (document.getElementById("occasion8").checked) {
   dbArray.push("Wedding");
 }
+console.log(dbArray.length);
+if (dbArray.length != 0) {
+  console.log("logged");
 db.collection("Gifts").doc(giftsList[giftNum].name).set( {
   naa: dbArray,
 })
+          }
           }
           function onClick() {
               var a = document.getElementById("Age Group");
@@ -268,25 +271,28 @@ db.collection("Gifts").doc(giftsList[giftNum].name).set( {
 
           function handleGift(currentGift) {
             var docRef = db.collection("Gifts").doc(currentGift.name);
-            docRef.get().then((doc) => {
+              docRef.get().then((doc) => {
               currentGift.naa = doc.data().naa;
-              // print[i] = currentGift.name;
-              var x = 'https://www.amazon.com/s?k=' + currentGift.name + '&ref=nb_sb_noss_1';
-              var d1 = document.getElementById('1');
-              d1.insertAdjacentHTML('afterend','<li><a href=" '+ x +' ">' + currentGift.name + '</a>');
-              // i++;
-            })
+
+              if (user.isApplicable(currentGift)) {
+                // print[i] = currentGift.name;
+                var x = 'https://www.amazon.com/s?k=' + currentGift.name + '&ref=nb_sb_noss_1';
+                var d1 = document.getElementById('1');
+                d1.insertAdjacentHTML('afterend','<li><a href=" '+ x +' ">' + currentGift.name + '</a>');
+                // i++;
+                }
+              }
+              )
           }
 
           function parse(giftArray) {
             let print = [];
             let i = 0;
+            
             console.log(giftArray);
             for (currentGift of giftArray) {
-              if (user.isApplicable(currentGift)) {
-                handleGift(currentGift);
-
-              }
+              handleGift(currentGift);
+              
             }
             return print;
           }
