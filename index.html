@@ -1,0 +1,301 @@
+<!doctype html>
+<html>
+
+  <head>
+    <title>Gift Advisor Home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="CSS/webCustomization.css"/>
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
+  <body>
+    <div id="something else" class="">
+      <h1 style="display: inline;">
+        <img src='./logo.png' class="logo" />
+        <a href="./index.html">Gift Helper</a>
+          <a href="./about.html">About</a>
+          <a href="./contact.html">Contact Us</a>
+      </h1>
+      <hr>
+        <p>
+        <p5>
+          <label> Please select every 
+            <p6>non applicable</p6> option for this gift!</label>
+        </p5>
+        <p id= "giftPrint"></p>
+        
+          <input type="checkbox" id="age1" name="0-3" value="Toddler">
+          <label for="age1"> 0-3 - Toddler</label><br>
+          <input type="checkbox" id="age2" name="4-12" value="Child">
+          <label for="age2"> 4-12 - Child</label><br>
+          <input type="checkbox" id="age3" name="13-19" value="Teenager">
+          <label for="age3"> 13-19 - Teenager</label><br>
+          <input type="checkbox" id="age4" name="20-50" value="Adult">
+          <label for="age4"> 20-50 - Adult</label><br>
+          <input type="checkbox" id="age5" name="50+" value="Senior">
+          <label for="age5"> 50+ - Senior</label><br>
+          <input type="checkbox" id="occasion1" name="Birthday" value="Birthday">
+          <label for="occasion1"> Birthday</label><br>
+          <input type="checkbox" id="occasion2" name="Baby Shower" value="Baby Shower">
+          <label for="occasion2"> Baby Shower</label><br>
+          <input type="checkbox" id="occasion3" name="Chirstmas" value="Chirstmas">
+          <label for="occasion3"> Chirstmas</label><br>
+          <input type="checkbox" id="occasion4" name="Easter" value="Easter">
+          <label for="occasion4"> Easter</label><br>
+          <input type="checkbox" id="occasion5" name="New Years" value="New Years">
+          <label for="occasion5"> New Years</label><br>
+          <input type="checkbox" id="occasion6" name="Chinese New Years" value="Chinese New Years">
+          <label for="occasion6"> Chinese New Years</label><br>
+          <input type="checkbox" id="occasion7" name="Valentines Day" value="Valentines Day">
+          <label for="occasion7"> Valentines Day</label><br>
+          <input type="checkbox" id="occasion8" name="Wedding" value="Wedding">
+          <label for="occasion8"> Wedding</label><br>
+          <input type="checkbox" id="interests1" name="Books" value="Books">
+          <label for="interests1"> Books</label><br>
+          <input type="checkbox" id="interests2" name="Video Games" value="Video Games">
+          <label for="interests2"> Video Games</label><br>
+          <input type="checkbox" id="interests3" name="Arts & Crafts" value="Arts & Crafts">
+          <label for="interests3"> Arts & Crafts</label><br>
+          <input type="checkbox" id="interests4" name="Personal Care" value="Personal Care">
+          <label for="interests4"> Personal Care</label><br>
+          <input type="checkbox" id="interests5" name="Cell Phone & Computer Accessories" value="Cell Phone & Computer Accessories">
+          <label for="interests5"> Cell Phone & Computer Accessories</label><br>
+          <input type="checkbox" id="interests6" name="Clothing" value="Clothing">
+          <label for="interests6"> Clothing</label><br>
+          <input type="checkbox" id="interests7" name="Home & Kitchen" value="Home & Kitchen">
+          <label for="interests7"> Home & Kitchen</label><br>
+          <input type="checkbox" id="interests8" name="Sports" value="Sports">
+          <label for="interests8"> Sports</label><br>
+          <input type="checkbox" id="interests9" name="Outdoors" value="Outdoors">
+          <label for="interests9"> Outdoors</label><br>
+          <div><button type="button" onclick="doASwitch();" class="btn btn-primary">Submit</button></div>
+          
+          
+        
+        </div>
+    <div id="selection" class="hidden">
+      <div class="top_bar">
+        <h1 style="display: inline;">
+            <img src='./logo.png' class="logo" />
+            <a href="./index.html">Gift Advisor</a>
+            <a href="./about.html">About</a>
+            <a href="./contact.html">Contact Us</a>
+        </h1>
+        <hr>
+      </div>
+          <p3>
+            Choose 3 categories to get a great gift suggestion!
+          </p3>
+        <p1 >
+          <p2 >
+            <div>
+            <label>Age Group:</label>
+            <select id = "Age Group">
+              <option value = "-- Select An Option --">-- Select An Option --</option>
+              <option value = "Toddler">0-3 - Toddler</option>
+              <option value = "Child">4-12 - Child</option>
+              <option value = "Teenager">13-19 - Teenager</option>
+              <option value = "Adult">20-50 - Adult</option>
+              <option value = "Senior">50+ - Senior</option>
+            </select>
+          </div>
+          <div>
+            <label>Occasion:</label>
+            <select id = "Occasion">
+
+              <option value = "-- Select An Option --">-- Select An Option --</option>
+              <option value = "Birthday">Birthday</option>
+              <option value = "Baby Shower">Baby Shower</option>
+              <option value = "Christmas">Christmas</option>
+              <option value = "Easter">Easter</option>
+              <option value = "New Years">New Years</option>
+              <option value = "Chinese New Years">Chinese New Years</option>
+              <option value = "Valentines Day">Valentines Day</option>
+              <option value = "Wedding">Wedding</option>
+            </select>
+          </div>
+          <div>
+            <label>Interests:</label>
+            <select id = "Interests">
+              <option value = "-- Select An Option --">-- Select An Option --</option>
+              <option value = "Books">Books</option>
+              <option value = "Video Games">Video Games</option>
+              <option value = "Arts & Crafts">Arts & Crafts</option>
+              <option value = "Personal Care">Personal Care</option>
+              <option value = "Cell Phone & Computer Accessories">Cell Phone & Computer Accessories</option>
+              <option value = "Clothing">Clothing</option>
+              <option value = "Home & Kitchen">Home & Kitchen</option>
+              <option value = "Sports">Sports</option>
+              <option value = "Outdoors">Outdoors</option>
+            </p2>
+            </select>
+          </div>
+          <div><button type="button" onclick="onClick();" class="btn btn-primary">Submit</button></div>
+            </div>
+        </p1>
+        <p id ="1"></p>
+      </div>
+
+      <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js"></script>
+
+
+      <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-firestore.js"></script>
+      
+      <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyCvHNl5pqekV-m7AFrpP9haSuzhXu-rjVo",
+          authDomain: "gift-advisor-a7e6e.firebaseapp.com",
+          databaseURL: "https://gift-advisor-a7e6e.firebaseio.com",
+          projectId: "gift-advisor-a7e6e",
+          storageBucket: "gift-advisor-a7e6e.appspot.com",
+          messagingSenderId: "246285034129",
+          appId: "1:246285034129:web:9636f239164e8fbc4f5530"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+      var db = firebase.firestore();
+      </script>
+      <script src="structures/search-info.js"></script>
+      <script src="structures/gift.js"></script>
+      <script src="our-gifts.js"></script>
+      <script>
+        let giftNum = Math.floor((Math.random() * (giftsList.length + 1)));
+          document.getElementById("giftPrint").innerHTML = giftsList[giftNum].name;
+          function doASwitch() {
+            document.getElementById('something else').className = 'hidden';
+            var element = document.getElementById("selection");
+            element.classList.remove("hidden");
+            console.log(document.getElementById("age1").checked);
+            let dbArray = [];
+            if (document.getElementById("age1").checked) {
+  dbArray.push("Toddler");
+}
+if (document.getElementById("age2").checked) {
+  dbArray.push("Child");
+}
+if (document.getElementById("age3").checked) {
+  dbArray.push("Teenager");
+}
+if (document.getElementById("age4").checked) {
+  dbArray.push("Adult");
+}
+if (document.getElementById("age5").checked) {
+  dbArray.push("Senior");
+}
+if (document.getElementById("interests1").checked) {
+  dbArray.push("Books");
+}
+if (document.getElementById("interests2").checked) {
+  dbArray.push("Video Games");
+}
+if (document.getElementById("interests3").checked) {
+ dbArray.push("Arts & Crafts");
+}
+if (document.getElementById("interests4").checked) {
+ dbArray.push("Personal Care");
+}
+if (document.getElementById("interests5").checked) {
+ dbArray.push("Cell Phone & Computer Accessories");
+}
+if (document.getElementById("interests6").checked) {
+  dbArray.push("Clothing");
+}
+if (document.getElementById("interests7").checked) {
+  dbArray.push("Home & Kitchen");
+}
+if (document.getElementById("interests8").checked) {
+  dbArray.push("Sports");
+}
+if (document.getElementById("interests9").checked) {
+  dbArray.push("Outdoors");
+}
+ 
+if (document.getElementById("occasion1").checked) {
+  dbArray.push("Toddler");
+}
+ 
+if (document.getElementById("occasion2").checked) {
+ dbArray.push("Baby Shower");
+}
+ 
+if (document.getElementById("occasion3").checked) {
+  dbArray.push("Christmas");
+}
+ 
+if (document.getElementById("occasion4").checked) {
+  dbArray.push("Easter");
+}
+ 
+if (document.getElementById("occasion5").checked) {
+dbArray.push("New Years");
+}
+ 
+if (document.getElementById("occasion6").checked) {
+  dbArray.push("Chinese New Years");
+}
+ 
+if (document.getElementById("occasion7").checked) {
+  dbArray.push("Valentines Day");
+}
+if (document.getElementById("occasion8").checked) {
+  dbArray.push("Wedding");
+}
+db.collection("Gifts").doc(giftsList[giftNum].name).set( {
+  naa: dbArray,
+})
+          }
+          function onClick() {
+              var a = document.getElementById("Age Group");
+              var ageGroupDrop = a.options[a.selectedIndex].value;
+              var b = document.getElementById("Occasion");
+              var ocassionDrop = b.options[b.selectedIndex].value;
+              var c = document.getElementById("Interests");
+              var interestDrop = c.options[c.selectedIndex].value;
+              this.user = new SearchInfo(ageGroupDrop, interestDrop, ocassionDrop);
+              console.log(user.age + ", " + user.interest + ", " + user.ocassion);
+              let print = "";
+              for (element of parse(giftsList)) {
+                print += element + ", ";
+              }
+              document.getElementById("1").innerHTML = print;
+          }
+
+          function handleGift(currentGift) {
+            var docRef = db.collection("Gifts").doc(currentGift.name);
+            docRef.get().then((doc) => {
+              currentGift.naa = doc.data().naa;
+              // print[i] = currentGift.name;
+              var x = 'https://www.amazon.com/s?k=' + currentGift.name + '&ref=nb_sb_noss_1';
+              var d1 = document.getElementById('1');
+              d1.insertAdjacen;tHTML('afterend','<li><a href=" '+ x +' ">' + currentGift.name + '</a>');
+              // i++;
+            })
+          }
+
+          function parse(giftArray) {
+            let print = [];
+            let i = 0;
+            console.log(giftArray);
+            for (currentGift of giftArray) {
+              if (user.isApplicable(currentGift)) {
+                handleGift(currentGift);
+
+              }
+            }
+            return print;
+          }
+          
+      </script>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      
+      
+  </body>
+</html>
