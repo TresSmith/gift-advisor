@@ -3,6 +3,8 @@
 
   <head>
     <title>Gift Advisor Home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="CSS/webCustomization.css"/>
     <style>
       .hidden {
@@ -69,7 +71,8 @@
           <label for="interests8"> Sports</label><br>
           <input type="checkbox" id="interests9" name="Outdoors" value="Outdoors">
           <label for="interests9"> Outdoors</label><br>
-          <div><button type="button" onclick="doASwitch();">Submit</button></div>
+          <div><button type="button" onclick="doASwitch();" class="btn btn-primary">Submit</button></div>
+          
           
         
         </div>
@@ -88,6 +91,7 @@
           </p3>
         <p1 >
           <p2 >
+            <div>
             <label>Age Group:</label>
             <select id = "Age Group">
               <option value = "-- Select An Option --">-- Select An Option --</option>
@@ -97,6 +101,8 @@
               <option value = "Adult">20-50 - Adult</option>
               <option value = "Senior">50+ - Senior</option>
             </select>
+          </div>
+          <div>
             <label>Occassion:</label>
             <select id = "Occasion">
 
@@ -110,6 +116,8 @@
               <option value = "Valentines Day">Valentines Day</option>
               <option value = "Wedding">Wedding</option>
             </select>
+          </div>
+          <div>
             <label>Interests:</label>
             <select id = "Interests">
               <option value = "-- Select An Option --">-- Select An Option --</option>
@@ -124,7 +132,9 @@
               <option value = "Outdoors">Outdoors</option>
             </p2>
             </select>
-            <div><button type="button" onclick="onClick();">Submit</button></div>
+          </div>
+          <div><button type="button" onclick="onClick();" class="btn btn-primary">Submit</button></div>
+            </div>
         </p1>
         <p id ="1"></p>
       </div>
@@ -271,6 +281,9 @@ db.collection("Gifts").doc(giftsList[giftNum].name).set( {
           }
           
       </script>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
       
       
   </body>
