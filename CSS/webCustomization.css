@@ -14,16 +14,20 @@ p{
     line-height: 1.6;
     font-size: 25px;
 }
+p1{
+    font-weight: 600;
+}
 p2{
     line-height: 1.6;
     font-size: 25px;
 }
-p5{
+p3{
     line-height: 1.6;
     font-size: 25px;
 }
-p6{
-    font-weight: 600;
+p4{
+    line-height: 1.6;
+    font-size: 25px;
 }
 .logo {
     line-height: 1.6;
