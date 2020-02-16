@@ -1,0 +1,17 @@
+let babyBlanket = createGift("Baby Blanket", ["empty"]);
+let doll = createGift("Doll", ["empty"]);
+let toyCar = createGift("Toy Car", ["empty"]);
+let motorola = createGift("Motorola", ["empty"]);
+let paintingKit = createGift("Painting Kit", ["empty"]);
+let heartStatue = createGift("Heart Statue", ["empty"]);
+let tent = createGift("Tent", ["empty"]);
+let bible = createGift("Bible", ["empty"]);
+let weddingPhotoBook = createGift("Wedding Photo Book", ["empty"]);
+let stuffedDog = createGift("Stuffed Dog", ["empty"]);
+let sweatShirt = createGift("Sweatshirt", ["empty"]);
+let NBA2K20 = createGift("NBA2K20", ["empty"]);
+let chineseClock = createGift("Chinese Clock", ["empty"]);
+let cookingBook = createGift("Cooking Book", ["empty"]);
+let badmintonSet = createGift("Badminton Set", ["empty"]);
+let how2Parent = createGift("How2Parent", ["empty"]);
+this.giftsList = [babyBlanket, doll, toyCar, motorola, paintingKit, heartStatue, tent, bible, weddingPhotoBook, stuffedDog, sweatShirt, NBA2K20, chineseClock, cookingBook, badmintonSet, how2Parent];

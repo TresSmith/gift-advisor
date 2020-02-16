@@ -266,17 +266,27 @@ db.collection("Gifts").doc(giftsList[giftNum].name).set( {
               }
               document.getElementById("1").innerHTML = print;
           }
+
+          function handleGift(currentGift) {
+            var docRef = db.collection("Gifts").doc(currentGift.name);
+            docRef.get().then((doc) => {
+              currentGift.naa = doc.data().naa;
+              // print[i] = currentGift.name;
+              var x = 'https://www.amazon.com/s?k=' + currentGift.name + '&ref=nb_sb_noss_1';
+              var d1 = document.getElementById('1');
+              d1.insertAdjacentHTML('afterend','<li><a href=" '+ x +' ">' + currentGift.name + '</a>');
+              // i++;
+            })
+          }
+
           function parse(giftArray) {
             let print = [];
             let i = 0;
             console.log(giftArray);
             for (currentGift of giftArray) {
               if (user.isApplicable(currentGift)) {
-                print[i] = currentGift.name;
-                var x = 'https://www.amazon.com/s?k=' + currentGift.name + '&ref=nb_sb_noss_1';
-                var d1 = document.getElementById('1');
-                d1.insertAdjacentHTML('afterend','<li><a href=" '+ x +' ">' + currentGift.name + '</a>');
-                i++;
+                handleGift(currentGift);
+
               }
             }
             return print;
