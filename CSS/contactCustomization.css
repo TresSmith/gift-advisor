@@ -10,15 +10,14 @@ label {
     display: block;
     margin: 3pt;
 }
+
 p{
-    line-height: 1.6;
+    line-height: 2;
     font-size: 25px;
 }
-p2{
-    line-height: 1.6;
-    font-size: 25px;
-}
+
+
 .logo {
-    line-height: 1.6;
+    line-height: 2;
     height: 35px;
 }

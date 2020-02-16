@@ -22,6 +22,9 @@ p5{
     line-height: 1.6;
     font-size: 25px;
 }
+p6{
+    font-weight: 600;
+}
 .logo {
     line-height: 1.6;
     height: 35px;
