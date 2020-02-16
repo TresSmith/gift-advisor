@@ -1,14 +1,14 @@
 class SearchInfo {
-    constructor(ageMe, interestMe, ocassionMe) {
+    constructor(ageMe, interestMe, occasionMe) {
         this.age = ageMe;
         this.interest = interestMe;
-        this.ocassion = ocassionMe;
+        this.occasion = occasionMe;
     }
     isApplicable(gift) {
         let applicability = true;
         var theGift;
         for (theGift of gift.naa) {
-            if (this.age == theGift || this.interest == theGift || this.ocassion == theGift) {
+            if (this.age == theGift || this.interest == theGift || this.occasion == theGift) {
                 applicability = false;
             }
         }
