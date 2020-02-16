@@ -29,6 +29,12 @@ p4{
     line-height: 1.6;
     font-size: 25px;
 }
+p6{
+    text-decoration: underline;
+    font-weight: bold;
+    line-height: 1.6;
+    font-size: 25px;
+}
 .logo {
     line-height: 1.6;
     height: 35px;
