@@ -10,7 +10,6 @@
       }
     </style>
   <body>
-
       <h1 style="display: inline;">
         <img src='./logo.png' class="logo" />
         Gift Advisor
@@ -19,33 +18,13 @@
       </h1>
       <hr>
 
-
-    <div id="something else" class="">
-      <div class="top_bar">
-        <h1 style="display: inline;">
-          <img src='./logo.png' class="logo" />
-          Gift Advisor
-          
-        </h1>
-        <p class="menu_bar">
-          <a href="youlink">about</a>
-        </p>
-      </div>
-        <p>
-          <p3>
-            Choose 3 categories to get a great gift suggestion!
-          </p3></p>
-        <p5>
-          <label> Please select every non applicable option for this gift!</label>
-        </p5>
-
     </div>
     <div id="selection" class="hidden">
       <div class="top_bar">
         <h1 style="display: inline;">
           <img src='./logo.png' class="logo" />
           Gift Advisor
-          
+
         </h1>
         <p class="menu_bar">
           <a href="youlink">about</a>
@@ -55,7 +34,7 @@
           <p3>
             Choose 3 categories to get a great gift suggestion!
           </p3></p>
-        
+
         <p1 >
           <p2 >
             <label>Age Group:</label>
@@ -67,8 +46,8 @@
               <option value = "20-50 - Adult">20-50 - Adult</option>
               <option value = "50+ - Senior">50+ - Senior</option>
             </select>
-            <label>Occasion:</label>
-            <select id = "Occasion">
+            <label>Ocassion:</label>
+            <select id = "Ocassion">
 
               <option value = "-- Select An Option --">-- Select An Option --</option>
               <option value = "Birthday">Birthday</option>
@@ -112,12 +91,12 @@
           function onClick() {
               var a = document.getElementById("Age Group");
               var ageGroupDrop = a.options[a.selectedIndex].value;
-              var b = document.getElementById("Occasion");
-              var occasionDrop = b.options[b.selectedIndex].value;
+              var b = document.getElementById("Ocassion");
+              var ocassionDrop = b.options[b.selectedIndex].value;
               var c = document.getElementById("Interests");
               var interestDrop = c.options[c.selectedIndex].value;
-              this.user = new SearchInfo(ageGroupDrop, interestDrop, occasionDrop);
-              console.log(user.age + ", " + user.interest + ", " + user.occassion);
+              this.user = new SearchInfo(ageGroupDrop, interestDrop, ocassionDrop);
+              console.log(user.age + ", " + user.interest + ", " + user.ocassion);
               let print = "";
               for (element of parse(gifts)) {
                 print += element + ", ";
