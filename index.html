@@ -261,11 +261,15 @@ db.collection("Gifts").doc(giftsList[giftNum].name).set( {
             for (currentGift of giftArray) {
               if (user.isApplicable(currentGift)) {
                 print[i] = currentGift.name;
+                var x = 'https://www.amazon.com/s?k=' + currentGift.name + '&ref=nb_sb_noss_1';
+                var d1 = document.getElementById('1');
+                d1.insertAdjacentHTML('afterend','<li><a href=" '+ x +' ">' + currentGift.name + '</a>');
                 i++;
               }
             }
             return print;
           }
+          
       </script>
       
       
