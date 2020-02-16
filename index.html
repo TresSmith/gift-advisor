@@ -23,7 +23,6 @@
             <p1>non applicable</p1> option for this gift!</label>
         </p>
         <p id= "gift"></p>
-        
           <input type="checkbox" id="age1" name="0-3" value="Toddler">
           <label for="age1"> 0-3 - Toddler</label><br>
           <input type="checkbox" id="age2" name="4-12" value="Child">
@@ -133,28 +132,25 @@
       <script src="structures/gift.js"></script>
       <script src="our-gifts.js"></script>
       <script>
-        let giftNum = Math.floor((Math.random() * (gifts.length + 1)));
-          document.getElementById("gift").innerHTML = gifts[giftNum].name;
+        let giftNum = Math.floor((Math.random() * (giftsList.length + 1)));
+          document.getElementById("giftPrint").innerHTML = giftsList[giftNum].name;
           function doASwitch() {
             document.getElementById('something else').className = 'hidden';
             var element = document.getElementById("selection");
             element.classList.remove("hidden");
           }
           
-          
-
-
           function onClick() {
               var a = document.getElementById("Age Group");
               var ageGroupDrop = a.options[a.selectedIndex].value;
-              var b = document.getElementById("Ocassion");
+              var b = document.getElementById("Occasion");
               var ocassionDrop = b.options[b.selectedIndex].value;
               var c = document.getElementById("Interests");
               var interestDrop = c.options[c.selectedIndex].value;
               this.user = new SearchInfo(ageGroupDrop, interestDrop, ocassionDrop);
               console.log(user.age + ", " + user.interest + ", " + user.ocassion);
               let print = "";
-              for (element of parse(gifts)) {
+              for (element of parse(giftsList)) {
                 print += element + ", ";
               }
               document.getElementById("1").innerHTML = print;
