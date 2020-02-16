@@ -166,7 +166,23 @@
       <script src="structures/gift.js"></script>
       <script src="db-gifts.js"></script>
       <script>
-        let giftNum = Math.floor((Math.random() * (giftsList.length + 1)));
+        
+        let giftNum = Math.floor((Math.random() * (giftsList.length)));
+              let hasOpen = false;
+              let isFilled;
+        for (k of giftsList) {
+          var docRef = db.collection("Gifts").doc(k.name);
+              docRef.get().then((doc) => {
+              isFilled = doc.data().hasBeenFilledOut;
+              })
+              if (!isFilled) {
+                hasOpen = true;
+                break;
+              }
+        }
+        if (hasOpen) {
+          doASwitch();
+        }
           document.getElementById("giftPrint").innerHTML = giftsList[giftNum].name;
           function doASwitch() {
             document.getElementById('something else').className = 'hidden';
@@ -251,6 +267,7 @@ if (dbArray.length != 0) {
   console.log("logged");
 db.collection("Gifts").doc(giftsList[giftNum].name).set( {
   naa: dbArray,
+  hasBeenFilledOut: true,
 })
           }
           }
