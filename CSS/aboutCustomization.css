@@ -3,6 +3,9 @@ body {
     background-color: #DDDDFF;
     margin:0;
 }
+nav{
+    float: right;
+}
 h1 {
     font-weight: 500;
 }
