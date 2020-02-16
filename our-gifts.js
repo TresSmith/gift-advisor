@@ -12,6 +12,6 @@ let sweatShirt = createGift("Sweatshirt", ["Toddler", "Child", "Teenager", "Adul
 let NBA2K20 = createGift("NBA2K20", ["Child", "Teenager", "Christmas", "Birthday"]);
 let chineseClock = createGift("Chinese Clock", ["Teenager", "Adult", "Senior+", "Chinese New Years"]);
 let cookingBook = createGift("Cooking Book", ["Child", "Teenager", "Adult", "Senior+", "Christmas", "Birthday", "Wedding"]);
-let badmitonSet = createGift("Badmiton Set", ["Child", "Teenager", "Christmas", "Birthday"]);
+let badmintonSet = createGift("Badminton Set", ["Child", "Teenager", "Christmas", "Birthday"]);
 let how2Parent = createGift("How2Parent", ["Adult", "Christmas", "Birthday", "Wedding"]);
 let gifts = [babyBlanket, doll, toyCar, motorola, paintingKit, heartStatue, tent, bible, weddingPhotoBook, stuffedDog, sweatShirt, NBA2K20, chineseClock, cookingBook, badmitonSet, how2Parent];

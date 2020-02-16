@@ -10,6 +10,7 @@
       }
     </style>
   <body>
+    <div id="something else" class="">
       <h1 style="display: inline;">
         <img src='./logo.png' class="logo" />
         <a href="./index.html">Gift Advisor</a>
@@ -17,8 +18,6 @@
         <a href="./contact.html">Contact Us</a>
       </h1>
       <hr>
-
-      </div>
         <p>
         <p5>
           <label> Please select every non applicable option for this gift!</label>
@@ -69,26 +68,23 @@
           <label for="interests8"> Sports</label><br>
           <input type="checkbox" id="interests9" name="Outdoors" value="Outdoors">
           <label for="interests9"> Outdoors</label><br>
-          <input type="submit" value="Submit">
+          <div><button type="button" onclick="doASwitch();">Submit</button></div>
           
         
         </div>
     <div id="selection" class="hidden">
       <div class="top_bar">
         <h1 style="display: inline;">
-          <img src='./logo.png' class="logo" />
-          Gift Advisor
-
+            <img src='./logo.png' class="logo" />
+            <a href="./index.html">Gift Advisor</a>
+            <a href="./about.html">About</a>
+            <a href="./contact.html">Contact Us</a>
         </h1>
-        <p class="menu_bar">
-          <a href="youlink">about</a>
-        </p>
+        <hr>
       </div>
-        <p>
           <p3>
             Choose 3 categories to get a great gift suggestion!
-          </p3></p>
-
+          </p3>
         <p1 >
           <p2 >
             <label>Age Group:</label>
@@ -139,8 +135,12 @@
       <script>
         let giftNum = Math.floor((Math.random() * (gifts.length + 1)));
           document.getElementById("gift").innerHTML = gifts[giftNum].name;
-          document.getElementById('something else').className = '';
-          document.getElementById('selections').className = 'hidden';
+          function doASwitch() {
+            document.getElementById('something else').className = 'hidden';
+            var element = document.getElementById("selection");
+            element.classList.remove("hidden");
+          }
+          
           
 
 
