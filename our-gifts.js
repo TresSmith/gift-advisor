@@ -1,0 +1,1 @@
+let toy = createGift("funtoy", ["0-3", "Christmas"]);
